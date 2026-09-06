@@ -1,56 +1,51 @@
 baseURL: "https://xiaozb.online/"
 title: "小张的 AI 笔记"
-description: "个人 AI 技术博客 — 大模型、Agent、实战经验与折腾记录"
+description: "记录 AI、LLM、Agent 与个人折腾"
 keywords:
   - AI
   - LLM
   - Agent
   - 大模型
-  - 人工智能
-author: "xiaozb"
+author: "小张"
 languageCode: "zh-cn"
 defaultContentLanguage: "zh-cn"
 hasCJKLanguage: true
 theme: "PaperMod"
 
-# 主题参数（PaperMod）
 params:
   env: production
-  description: "个人 AI 技术博客 — 大模型、Agent、实战经验与折腾记录"
-  keywords:
-    - AI
-    - LLM
-    - Agent
-    - 大模型
-  author: "xiaozb"
+  description: "记录 AI、LLM、Agent 与个人折腾"
+  author: "小张"
   DateFormat: "2006-01-02"
   defaultTheme: auto
   ShowShareButtons: false
   ShowPostNavLinks: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
+  ShowReadingTime: true
+  ShowWordCount: false
   ShowRssButtonInSectionMenu: true
+  ShowPageNums: true
   disableSpecial1stPost: true
   mainSections:
     - posts
   assets:
     favicon: "/favicon.ico"
-  profileMode:
-    enabled: true
-    title: "小张的 AI 笔记"
-    subtitle: "个人 AI 技术博客 — 大模型 / Agent / 折腾记录"
-    imageUrl: ""
-    imageWidth: 100
-    imageHeight: 100
-    buttons:
-      - name: "Posts"
-        url: "posts/"
-      - name: "归档"
-        url: "archives/"
-      - name: "标签"
-        url: "tags/"
-      - name: "关于"
-        url: "about/"
+  homeInfoParams:
+    Title: "你好，我是小张 👋"
+    Content: |
+      这里是我的 AI 技术笔记。
+
+      记录大模型、Agent、自动化工具，以及每一次真实的折腾与复盘。
+  socialIcons:
+    - name: github
+      url: "https://github.com/yutter2024"
+    - name: email
+      url: "mailto:xiaozb@xiaozb.online"
+  label:
+    text: "小张的 AI 笔记"
+    icon: "/favicon.svg"
+    iconHeight: 28
 
 menu:
   main:
@@ -70,15 +65,17 @@ menu:
       name: 关于
       url: /about/
       weight: 40
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 50
 
-# 输出格式：RSS 必需
 outputs:
   home:
     - HTML
     - RSS
     - JSON
 
-# Markdown 配置：支持代码高亮、任务列表、表情
 markup:
   goldmark:
     renderer:
@@ -91,16 +88,13 @@ markup:
     style: monokai
     tabWidth: 4
 
-# Permalinks
 permalinks:
   posts: /posts/:slug/
 
-# 站点隐私配置（Cloudflare Pages 友好）
 privacy:
   disqus:
     disable: true
   googleAnalytics:
     disable: true
 
-# 不要生成冗余 sitemap，Cloudflare 也能爬
 enableRobotsTXT: true

@@ -3,7 +3,7 @@ title: "为什么我要搭这个博客"
 date: 2026-09-06
 draft: false
 slug: "why-this-blog"
-description: "建站初衷，以及为什么选择 Hugo + Cloudflare Pages 这个零成本方案"
+description: "建站初衷，以及为什么选择 Hugo + GitHub Pages 这个零成本方案"
 tags: ["Meta", "建站"]
 categories: ["随笔"]
 ---
@@ -22,15 +22,16 @@ AI 时代，信息的半衰期越来越短。读完一篇论文、踩完一个�
 
 | 候选 | 成本 | 优点 | 缺点 |
 |---|---|---|---|
-| Hugo + Cloudflare Pages | **0 元** | 极快、全球 CDN、HTTPS 自动 | 国内访问偶尔慢 |
+| Hugo + GitHub Pages | **0 元** | 免费、Git 推送即部署、HTTPS 自动 | 国内访问有时慢/不稳定 |
 | Hexo + Vercel | 0 元 | 中文文档多 | 构建慢 |
 | WordPress + 虚拟主机 | ~100 元/年 | 后台成熟 | 要维护 |
 | Notion 转公开页 | 0 元 | 一键发布 | 风格受限、SEO 差 |
 
-最后选了 **Hugo + Cloudflare Pages**：
+最后选了 **Hugo + GitHub Pages**：
 - Hugo 是静态站点生成器里最快的，单页 1ms 出头
-- Cloudflare Pages 免费额度无限（每天 50 万次请求封顶，个人博客远远用不到）
-- HTTPS、CDN、DDoS 防护全自动
+- GitHub Pages 对公开仓库免费无限，仓库就是备份
+- GitHub Actions 自动构建部署，推送代码即上线
+- HTTPS、自定义域名全自动
 - 域名我已经有了 `xiaozb.online`，配个 DNS 就行
 
 ## 接下来
