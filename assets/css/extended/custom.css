@@ -126,3 +126,36 @@ code {
   order: 3;
   color: var(--secondary);
 }
+
+/* ===== Apple/Google 风格细节 ===== */
+/* 文章页 H2/H3 字号收紧（原 34px 层级过重） */
+.post-content h2 {
+  font-size: 1.55rem;
+}
+
+.post-content h3 {
+  font-size: 1.25rem;
+}
+
+/* 移动端：profile 标题/副标题自适应流式字号（避免 @media 压缩 bug，clamp 天然响应式） */
+.main .profile .profile_inner {
+  padding: 0 1.25rem;
+}
+
+.main .profile .profile_inner h1 {
+  font-size: clamp(1.7rem, 5.5vw, 2.25rem);
+  word-break: break-word;
+}
+
+.main .profile .profile_inner p {
+  word-break: break-word;
+}
+
+/* span 包裹的副标题：行内元素会撑破容器，强制约束宽度 */
+.main .profile .profile_inner > * {
+  max-width: 100%;
+}
+
+.main .profile .profile_inner span {
+  display: block;
+}
