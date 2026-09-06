@@ -1,0 +1,6 @@
+# Cloudflare Pages header rules: first match wins, so /assets/* goes first.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
+
+/*
+  Cache-Control: public, max-age=300, must-revalidate
