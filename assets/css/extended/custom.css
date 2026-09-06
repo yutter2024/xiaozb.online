@@ -102,3 +102,27 @@ code {
     background: color-mix(in srgb, var(--theme) 85%, transparent);
   }
 }
+
+/* ===== 文章页：信息行(时间/阅读时长)移到标题上方，全站统一 ===== */
+.post-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.post-meta {
+  order: 1;
+  font-size: 13px;
+  color: var(--secondary);
+  letter-spacing: 0.02em;
+  margin-bottom: 6px;
+}
+
+.post-title {
+  order: 2;
+  margin-top: 0;
+}
+
+.post-description {
+  order: 3;
+  color: var(--secondary);
+}
