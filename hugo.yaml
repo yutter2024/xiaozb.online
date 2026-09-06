@@ -37,6 +37,20 @@ params:
       这里是我的 AI 技术笔记。
 
       记录大模型、Agent、自动化工具，以及每一次真实的折腾与复盘。
+  profileMode:
+    enabled: true
+    title: "你好，我是小张 👋"
+    subtitle: |
+      这里是我的 AI 技术笔记。
+
+      记录大模型、Agent、自动化工具，以及每一次真实的折腾与复盘。
+    imageUrl: "avatar.png"
+    imageTitle: "小张"
+    imageWidth: 128
+    imageHeight: 128
+    buttons:
+      - name: 查看文章
+        url: /posts/
   socialIcons:
     - name: github
       url: "https://github.com/yutter2024"
