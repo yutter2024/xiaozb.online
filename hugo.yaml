@@ -72,7 +72,7 @@ menu:
       url: /posts/
       weight: 10
     - identifier: archives
-      name: 归档
+      name: 时间线
       url: /archives/
       weight: 20
     - identifier: tags
