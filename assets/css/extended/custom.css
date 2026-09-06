@@ -82,3 +82,23 @@ code {
   --code-bg: #161b22;
   --border: #30363d;
 }
+
+/* ===== 头部调整：站名移到左侧内容边距 + 吸顶毛玻璃 ===== */
+:root {
+  --nav-width: 1240px;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--theme);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+}
+
+@supports (background: color-mix(in srgb, red 50%, transparent)) {
+  .header {
+    background: color-mix(in srgb, var(--theme) 85%, transparent);
+  }
+}
