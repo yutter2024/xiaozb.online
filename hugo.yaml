@@ -55,7 +55,7 @@ params:
     - name: github
       url: "https://github.com/yutter2024"
     - name: email
-      url: "mailto:hello@yutterx.com"
+      url: "mailto:yutter@yutterx.com"
   label:
     text: "Yutter的 AI 笔记"
     icon: "/favicon.svg"
