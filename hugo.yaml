@@ -72,7 +72,7 @@ menu:
       url: /posts/
       weight: 10
     - identifier: archives
-      name: 时间线
+      name: Timeline
       url: /archives/
       weight: 20
     - identifier: tags
@@ -84,7 +84,7 @@ menu:
       url: /about/
       weight: 40
     - identifier: search
-      name: 搜索
+      name: Search
       url: /search/
       weight: 50
 
