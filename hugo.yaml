@@ -1,12 +1,12 @@
 baseURL: "https://yutterx.com/"
-title: "小张的 AI 笔记"
+title: "Yutter的 AI 笔记"
 description: "记录 AI、LLM、Agent 与个人折腾"
 keywords:
   - AI
   - LLM
   - Agent
   - 大模型
-author: "小张"
+author: "Yutter"
 languageCode: "zh-cn"
 defaultContentLanguage: "zh-cn"
 hasCJKLanguage: true
@@ -15,7 +15,7 @@ theme: "PaperMod"
 params:
   env: production
   description: "记录 AI、LLM、Agent 与个人折腾"
-  author: "小张"
+  author: "Yutter"
   DateFormat: "2006-01-02"
   defaultTheme: auto
   ShowShareButtons: false
@@ -32,20 +32,20 @@ params:
   assets:
     favicon: "/favicon.ico"
   homeInfoParams:
-    Title: "你好，我是小张 👋"
+    Title: "你好，我是Yutter 👋"
     Content: |
       这里是我的 AI 技术笔记。
 
       记录大模型、Agent、自动化工具，以及每一次真实的折腾与复盘。
   profileMode:
     enabled: true
-    title: "你好，我是小张 👋"
+    title: "你好，我是Yutter 👋"
     subtitle: |
       这里是我的 AI 技术笔记。
 
       记录大模型、Agent、自动化工具，以及每一次真实的折腾与复盘。
     imageUrl: "avatar.png"
-    imageTitle: "小张"
+    imageTitle: "Yutter"
     imageWidth: 128
     imageHeight: 128
     buttons:
@@ -57,7 +57,7 @@ params:
     - name: email
       url: "mailto:xiaozb@xiaozb.online"
   label:
-    text: "小张的 AI 笔记"
+    text: "Yutter的 AI 笔记"
     icon: "/favicon.svg"
     iconHeight: 28
 

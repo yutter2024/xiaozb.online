@@ -2,11 +2,11 @@
 title: "关于我"
 date: 2026-09-06
 draft: false
-description: "关于小张和这个博客"
+description: "关于Yutter和这个博客"
 slug: "about"
 ---
 
-你好，我是 **小张 (xiaozb)**。
+你好，我是 **Yutter (xiaozb)**。
 
 这个站点用来记录我在 **AI / 大模型 / Agent** 方向的学习、折腾和实战经验。
 内容通常比较零散：可能是某篇论文的速读、一个开源项目的踩坑笔记、

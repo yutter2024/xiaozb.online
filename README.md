@@ -1,4 +1,4 @@
-# 小张的 AI 笔记
+# Yutter的 AI 笔记
 
 个人 AI 技术博客，基于 [Hugo](https://gohugo.io/) + [PaperMod](https://github.com/adityatelange/hugo-PaperMod)（主题已直接入库）。
 
