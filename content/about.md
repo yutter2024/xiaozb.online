@@ -1,5 +1,5 @@
 ---
-title: "关于我"
+title: "About"
 date: 2026-09-06
 draft: false
 description: "关于Yutter和这个博客"
@@ -15,4 +15,3 @@ slug: "about"
 如果你也在折腾 AI，欢迎邮件交流 👋
 
 - 邮箱：[yutter@yutterx.com](mailto:yutter@yutterx.com)
-- 域名：yutterx.com
