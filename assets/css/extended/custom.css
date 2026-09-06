@@ -23,20 +23,6 @@ body {
   letter-spacing: -0.02em;
 }
 
-.logo a:first-child {
-  display: inline-flex;
-  align-items: center;
-  gap: 9px;
-}
-
-.logo a:first-child::before {
-  content: "";
-  display: inline-block;
-  width: 28px;
-  height: 28px;
-  background: url("/favicon.svg") center / contain no-repeat;
-}
-
 .nav a {
   font-size: 15px;
 }
