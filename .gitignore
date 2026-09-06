@@ -1,0 +1,22 @@
+# 本地预览（截图、widget）
+preview/
+
+# Hugo 输出目录
+public/
+resources/_gen/
+hugo.exe
+hugo.darwin
+hugo.linux
+
+# 本地预览缓存
+.hugo_build.lock
+
+# 编辑器
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
+
+# 日志
+*.log

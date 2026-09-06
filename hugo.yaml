@@ -1,0 +1,106 @@
+baseURL: "https://xiaozb.online/"
+title: "小张的 AI 笔记"
+description: "个人 AI 技术博客 — 大模型、Agent、实战经验与折腾记录"
+keywords:
+  - AI
+  - LLM
+  - Agent
+  - 大模型
+  - 人工智能
+author: "xiaozb"
+languageCode: "zh-cn"
+defaultContentLanguage: "zh-cn"
+hasCJKLanguage: true
+theme: "PaperMod"
+
+# 主题参数（PaperMod）
+params:
+  env: production
+  description: "个人 AI 技术博客 — 大模型、Agent、实战经验与折腾记录"
+  keywords:
+    - AI
+    - LLM
+    - Agent
+    - 大模型
+  author: "xiaozb"
+  DateFormat: "2006-01-02"
+  defaultTheme: auto
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionMenu: true
+  disableSpecial1stPost: true
+  mainSections:
+    - posts
+  assets:
+    favicon: "/favicon.ico"
+  profileMode:
+    enabled: true
+    title: "小张的 AI 笔记"
+    subtitle: "个人 AI 技术博客 — 大模型 / Agent / 折腾记录"
+    imageUrl: ""
+    imageWidth: 100
+    imageHeight: 100
+    buttons:
+      - name: "Posts"
+        url: "posts/"
+      - name: "归档"
+        url: "archives/"
+      - name: "标签"
+        url: "tags/"
+      - name: "关于"
+        url: "about/"
+
+menu:
+  main:
+    - identifier: posts
+      name: 文章
+      url: /posts/
+      weight: 10
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 20
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 30
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: 40
+
+# 输出格式：RSS 必需
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON
+
+# Markdown 配置：支持代码高亮、任务列表、表情
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    noClasses: false
+    codeFences: true
+    guessSyntax: true
+    lineNos: false
+    style: monokai
+    tabWidth: 4
+
+# Permalinks
+permalinks:
+  posts: /posts/:slug/
+
+# 站点隐私配置（Cloudflare Pages 友好）
+privacy:
+  disqus:
+    disable: true
+  googleAnalytics:
+    disable: true
+
+# 不要生成冗余 sitemap，Cloudflare 也能爬
+enableRobotsTXT: true
