@@ -456,3 +456,103 @@ code {
   color: #7bd88f;
   background: rgba(76, 175, 80, 0.16);
 }
+
+/* ===== 从这里开始：路线卡片 ===== */
+.route-card {
+  background: var(--entry);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.3em 1.5em;
+  margin: 1.4em 0;
+}
+
+.route-card .route-head {
+  font-size: 1.05rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 0.3em;
+}
+
+.route-card .route-tag {
+  font-size: 11px;
+  font-weight: 600;
+  color: #2e7d32;
+  background: rgba(76, 175, 80, 0.12);
+  border: 1px solid rgba(76, 175, 80, 0.35);
+  border-radius: 999px;
+  padding: 2px 9px;
+}
+
+[data-theme="dark"] .route-card .route-tag {
+  color: #7bd88f;
+}
+
+.route-card .route-desc {
+  font-size: 0.92em;
+  color: var(--secondary);
+  margin: 0.2em 0 0.9em;
+}
+
+.route-card .route-list {
+  padding-left: 1.6em;
+  margin: 0;
+}
+
+.route-card .route-list li {
+  margin: 0.6em 0;
+}
+
+.route-card .route-list a {
+  color: #0a84ff;
+  font-weight: 500;
+}
+
+[data-theme="dark"] .route-card .route-list a {
+  color: #4ca6ff;
+}
+
+.route-card .route-note {
+  display: block;
+  font-size: 0.86rem;
+  color: var(--secondary);
+  margin-top: 2px;
+}
+
+.route-card .route-tip {
+  margin: 1em 0 0;
+  font-size: 0.9em;
+  color: var(--secondary);
+  border-top: 1px dashed var(--border);
+  padding-top: 0.8em;
+}
+
+.start-more {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8em;
+  margin: 1.8em 0 0;
+}
+
+.start-more .more-item {
+  display: inline-flex;
+}
+
+.start-more a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.92rem;
+  color: var(--primary);
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 18px;
+  transition: border-color 0.15s ease, transform 0.15s ease;
+}
+
+.start-more a:hover {
+  border-color: #0a84ff;
+  transform: translateY(-1px);
+}
