@@ -2,6 +2,8 @@
 title: "为什么我要搭这个博客"
 date: 2026-09-06
 draft: false
+weight: -999
+pinned: true
 slug: "why-this-blog"
 description: "建站初衷，以及为什么选择 Hugo + Cloudflare Pages 这个零成本方案"
 tags: ["Meta", "建站"]
