@@ -77,18 +77,10 @@ menu:
       name: 分类
       url: /categories/
       weight: 15
-    - identifier: archives
-      name: 时间线
-      url: /archives/
-      weight: 20
     - identifier: start
       name: 从这里开始
       url: /start/
       weight: 25
-    - identifier: tags
-      name: 标签
-      url: /tags/
-      weight: 30
     - identifier: about
       name: 关于
       url: /about/
