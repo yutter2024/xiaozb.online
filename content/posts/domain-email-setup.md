@@ -2,6 +2,7 @@
 title: "域名创建与品牌邮箱部署（详细图文教学版）"
 date: 2026-09-07
 posttype: "教程"
+verified: true
 homeblock: tutorial
 summary: "域名 + DNS + 品牌邮箱一次走完：注册域名 → Cloudflare 接管 → OquMail 免费邮箱 → 实测收发（已实测）。"
 draft: false
@@ -39,7 +40,7 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 ## 第一章 · 创建域名
 
-**步骤 1 · 打开 Google Workspace 注册页面**
+**步骤 01 · 打开 Google Workspace 注册页面**
 
 打开 Google Workspace 官方注册页面，点击"开始免费试用"、Get started 或相同含义的按钮。已登录 Google 账号时，系统通常会自动识别当前账号；没有登录时，按页面提示登录。
 
@@ -47,11 +48,11 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 ![图1 注册流程](/images/domain-email-setup/fig01.jpg)
 
-**步骤 2 · 创建新的 Workspace 账号**
+**步骤 02 · 创建新的 Workspace 账号**
 
 选择创建新的账号，填写公司名称或项目名称。个人使用可以填自己的名字或品牌名。员工人数选择"只有您一人"。这个选项主要影响后续 Workspace 的组织设置，不会改变你要注册的域名名称。
 
-**步骤 3 · 选择地区并填写联系信息 ⚠️ 重点**
+**步骤 03 · 选择地区并填写联系信息 ⚠️ 重点**
 
 选择地区会影响货币、价格、税费和付款方式。**视频实测：选土耳其（Turkey）地区汇率最划算**——.com 等常规后缀统一 **75 土耳其里拉/年 ≈ 11 元人民币**，与主流平台动辄几十元的续费价相比性价比极高。
 
@@ -65,11 +66,11 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 ![图2 填写联系人](/images/domain-email-setup/fig02.jpg)
 
-**步骤 4 · 选择新的自定义域名**
+**步骤 04 · 选择新的自定义域名**
 
 当页面询问是否已有域名时，选择"获取新的自定义域名"、购买新的域名或相同含义的选项。**不要选临时子域名**，否则后续邮箱地址可能不是你想要的自定义域名邮箱。
 
-**步骤 5 · 搜索域名**
+**步骤 05 · 搜索域名**
 
 输入准备好的域名名称，点击搜索。系统会告诉你这个域名是否可购买。已被占用的名称不能直接注册，换名称或从系统推荐的备选中选择。
 
@@ -83,7 +84,7 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 ## 第二章 · 确认价格、资料和付款
 
-**步骤 6 · 确认域名价格 ⚠️ 重点**
+**步骤 06 · 确认域名价格 ⚠️ 重点**
 
 付款前不要只看首年金额。重点检查注册年限、续费价格、货币、税费和自动续费状态。视频中的人民币换算只适用于当时汇率和账号条件，实际金额以你当前结算页显示为准。
 
@@ -91,7 +92,7 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 ![图4 确认价格](/images/domain-email-setup/fig04.jpg)
 
-**步骤 7 · 填写域名联系人资料 ⚠️ 重点**
+**步骤 07 · 填写域名联系人资料 ⚠️ 重点**
 
 按页面要求填写街道、城市、省份、邮编和电话。**因为选了土耳其区，地址也填土耳其地址生成器给出的本地地址**（街道、邮编、区、省依次填入），电话随便填。收款资料与地区要保持一致。若页面显示 Whois 隐私保护选项，查看它是否已经开启。
 
@@ -99,7 +100,7 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 ![图5 联系人地址](/images/domain-email-setup/fig05.jpg)
 
-**步骤 8 · 创建管理员邮箱和密码**
+**步骤 08 · 创建管理员邮箱和密码**
 
 设置管理员用户名和密码。用户名可能成为你的域名邮箱前缀，例如用户名是 admin，域名是 example.com，之后可能创建 admin@example.com。密码不要与 Google 账号或其他网站重复。
 
@@ -112,7 +113,7 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 ![图6 管理员账号](/images/domain-email-setup/fig06.jpg)
 
-**步骤 9 · 完成付款 ⚠️ 重点**
+**步骤 09 · 完成付款 ⚠️ 重点**
 
 此时账单里会有**两笔潜在扣款**：
 
@@ -141,7 +142,11 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 ![图8 域名管理](/images/domain-email-setup/fig08.jpg)
 
-**步骤 9 补充 · 点击 Log in 用 Continue with Google 登录（务必选刚购买的带新域名企业邮箱授权登录），进入后域名在 Domain 列表，状态 Action required——15 天内完成邮箱验证，回到邮件点 Verify，状态变绿色 Active**。
+**补充说明 · 点击 Log in 用 Continue with Google 登录（务必选刚购买的带新域名企业邮箱授权登录），进入后域名在 Domain 列表，状态 Action required——15 天内完成邮箱验证，回到邮件点 Verify，状态变绿色 Active**。
+
+**步骤 11 · 确认域名状态**
+
+进入域名列表，确认域名名称、状态、到期时间和 DNS 管理入口。不要在没有备份记录的情况下删除旧 DNS 记录。
 
 **图 09｜确认域名已经激活**
 

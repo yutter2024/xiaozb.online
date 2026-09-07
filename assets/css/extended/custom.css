@@ -570,3 +570,51 @@ code {
   border-color: #0a84ff;
   transform: translateY(-1px);
 }
+
+/* ===== 复评落地：导航"从这里开始"主入口 ===== */
+.menu a[href="/start/"],
+.menu a[title="从这里开始"] {
+  background: #0a84ff;
+  color: #fff;
+  border-radius: 999px;
+  padding: 3px 14px;
+  transition: opacity 0.15s ease;
+}
+
+[data-theme="dark"] .menu a[title="从这里开始"] {
+  background: #4ca6ff;
+}
+
+.menu a[href="/start/"]:hover,
+.menu a[title="从这里开始"]:hover {
+  opacity: 0.85;
+}
+
+/* ===== 复评落地：目录 sticky + 当前章节高亮 ===== */
+details.toc {
+  position: sticky;
+  top: calc(var(--header-height) + 12px);
+  z-index: 5;
+  background: var(--theme);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.4em 1em;
+  max-width: 280px;
+}
+
+[data-theme="dark"] details.toc {
+  background: var(--theme);
+}
+
+details.toc .toc a {
+  transition: color 0.15s ease;
+}
+
+details.toc .toc a.active {
+  color: #0a84ff;
+  font-weight: 600;
+}
+
+[data-theme="dark"] details.toc .toc a.active {
+  color: #4ca6ff;
+}

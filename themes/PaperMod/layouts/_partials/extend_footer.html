@@ -1,3 +1,43 @@
-{{- /* Footer custom content area start */ -}}
-{{- /*     Insert any custom code web-analytics, resources, etc. here */ -}}
-{{- /* Footer custom content area end */ -}}
+{{- /* 目录滚动高亮：监听标题位置，为 toc 当前项加 active */ -}}
+{{- if eq .Type "posts" }}
+<script>
+(function () {
+  var toc = document.querySelector("details.toc");
+  if (!toc) return;
+  var links = Array.prototype.slice.call(toc.querySelectorAll("a"));
+  if (!links.length) return;
+  var heads = links
+    .map(function (a) {
+      var id = decodeURIComponent(a.getAttribute("href").replace(/^#/, ""));
+      return document.getElementById(id);
+    })
+    .filter(Boolean);
+
+  function onScroll() {
+    var y = window.scrollY + 100;
+    var idx = 0;
+    for (var i = 0; i < heads.length; i++) {
+      if (heads[i].offsetTop <= y) idx = i;
+    }
+    links.forEach(function (a, i) {
+      a.classList.toggle("active", i === idx);
+    });
+  }
+  var ticking = false;
+  window.addEventListener(
+    "scroll",
+    function () {
+      if (!ticking) {
+        ticking = true;
+        requestAnimationFrame(function () {
+          onScroll();
+          ticking = false;
+        });
+      }
+    },
+    { passive: true }
+  );
+  onScroll();
+})();
+</script>
+{{- end }}

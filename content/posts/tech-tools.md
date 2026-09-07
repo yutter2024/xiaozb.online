@@ -1,7 +1,7 @@
 ---
 title: "科技杂谈：我常用的网站和 App 清单"
 date: 2026-09-06
-posttype: "随笔"
+posttype: "实测"
 homeblock: creative
 summary: "一份持续更新的实用清单：日常、购物、音乐、AI、应用与网站的两档推荐。"
 draft: false

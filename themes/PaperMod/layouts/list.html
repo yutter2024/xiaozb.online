@@ -17,7 +17,7 @@
     <article class="post-entry">
       <header class="entry-header">
         <h2 class="entry-hint-parent">
-          <span class="pin-wrap">{{- if .Params.posttype }}<span class="type-badge">{{ .Params.posttype }}</span>{{- end }}{{ .Title }}</span>
+          <span class="pin-wrap">{{- if .Params.posttype }}<span class="type-badge">{{ .Params.posttype }}</span>{{- end }}{{ if .Params.verified }}<span class="verified-badge">已实测</span>{{- end }}{{ .Title }}</span>
         </h2>
       </header>
       {{- if (ne (.Param "hideSummary") true) }}
@@ -47,7 +47,7 @@
     <article class="post-entry">
       <header class="entry-header">
         <h2 class="entry-hint-parent">
-          <span class="pin-wrap">{{- if .Params.posttype }}<span class="type-badge">{{ .Params.posttype }}</span>{{- end }}{{ .Title }}</span>
+          <span class="pin-wrap">{{- if .Params.posttype }}<span class="type-badge">{{ .Params.posttype }}</span>{{- end }}{{ if .Params.verified }}<span class="verified-badge">已实测</span>{{- end }}{{ .Title }}</span>
         </h2>
       </header>
       {{- if (ne (.Param "hideSummary") true) }}
@@ -130,7 +130,7 @@
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
   <header class="entry-header">
     <h2 class="entry-hint-parent">
-      <span class="pin-wrap">{{- if .Params.posttype }}<span class="type-badge">{{ .Params.posttype }}</span>{{- end }}{{ if .Params.pinned }}<span class="pin-badge">置顶</span>{{- end }}{{ .Title }}</span>
+      <span class="pin-wrap">{{- if .Params.posttype }}<span class="type-badge">{{ .Params.posttype }}</span>{{- end }}{{ if .Params.verified }}<span class="verified-badge">已实测</span>{{- end }}{{ if .Params.pinned }}<span class="pin-badge">置顶</span>{{- end }}{{ .Title }}</span>
       {{- if .Draft }}
       <span class="entry-hint" title="Draft">
         <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
