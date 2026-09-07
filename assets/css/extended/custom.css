@@ -571,20 +571,34 @@ code {
   transform: translateY(-1px);
 }
 
-/* ===== 复评落地：目录折叠卡片（流内展开，不遮挡正文） ===== */
+/* ===== 复评落地：目录折叠卡片（流内展开，不遮挡正文）Apple 毛玻璃 ===== */
 details.toc {
   position: static;
   z-index: auto;
   background: var(--theme);
   border: 1px solid var(--border);
-  border-radius: 10px;
+  border-radius: 12px;
   padding: 0.4em 1em;
   max-width: 100%;
   margin: 0 0 1.2em;
 }
 
+@supports ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+  details.toc {
+    background: color-mix(in srgb, var(--theme) 55%, transparent);
+    -webkit-backdrop-filter: blur(18px) saturate(1.4);
+    backdrop-filter: blur(18px) saturate(1.4);
+    border: 1px solid color-mix(in srgb, var(--border) 65%, transparent);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.07);
+  }
+}
+
 [data-theme="dark"] details.toc {
   background: var(--theme);
+}
+
+[data-theme="dark"] details.toc .toc a {
+  transition: color 0.15s ease;
 }
 
 details.toc .toc a {
