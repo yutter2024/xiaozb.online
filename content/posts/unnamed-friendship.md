@@ -1,7 +1,8 @@
 ---
 title: "微剧本：《未命名的友谊》"
 date: 2026-09-06
-
+posttype: "创作"
+homeblock: creative
 summary: "四场微剧本：孤独的阿彬遇见两位朋友，一切回到那本愿望本。"
 draft: false
 slug: "unnamed-friendship"
@@ -9,7 +10,6 @@ description: "四场微剧本：孤独的阿彬在教室里遇见两位朋友，
 tags: ["剧本", "创作", "友谊"]
 categories: ["游戏与创作"]
 related: ['red-dead-redemption-saga']
-homeblock: creative
 ---
 
 ## 故事梗概

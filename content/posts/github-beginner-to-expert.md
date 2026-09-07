@@ -1,7 +1,8 @@
 ---
 title: "GitHub 从入门到精通：找项目、建仓库、协作与自动化"
 date: 2026-09-07
-
+posttype: "教程"
+homeblock: tutorial
 summary: "从看懂别人的仓库，到发布第一个项目、走通一次协作——万字长文，11 章完整路径。"
 draft: false
 slug: "github-beginner-to-expert"
@@ -9,7 +10,6 @@ description: "万字长文（转载）：一次走通 GitHub——看懂别人�
 tags: ["GitHub", "教程", "Git", "转载"]
 categories: ["建站教程"]
 related: ['domain-email-setup', 'why-this-blog']
-homeblock: tutorial
 ---
 
 > ✍️ **转载文章**｜原作者：小墨同学（@xiaomovps）｜[原文链接](https://x.com/i/article/2095169933118480384)｜[原推文](https://x.com/xiaomovps/status/2095322130422653298)

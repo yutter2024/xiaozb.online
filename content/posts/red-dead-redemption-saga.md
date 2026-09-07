@@ -1,7 +1,8 @@
 ---
 title: "荒野大镖客：救赎——两代亡命徒的完整史诗（1899–1914）"
 date: 2026-09-06
-
+posttype: "创作"
+homeblock: creative
 summary: "RDR2 × RDR1 编年史：范德林德帮的黄昏、亚瑟的救赎、约翰的清算与杰克最后的枪声。"
 draft: false
 slug: "red-dead-redemption-saga"
@@ -9,7 +10,6 @@ description: "把《荒野大镖客：救赎2》与《救赎1》串成一部完�
 tags: ["游戏", "荒野大镖客", "剧情", "RDR"]
 categories: ["游戏与创作"]
 related: ['unnamed-friendship']
-homeblock: creative
 ---
 
 > "我不常谈起他，但我时常想起他。"

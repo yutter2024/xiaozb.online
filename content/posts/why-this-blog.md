@@ -3,8 +3,8 @@ title: "为什么我要搭这个博客"
 date: 2026-09-06
 weight: -999
 pinned: true
-
-summary: "建站初衷，以及为什么是 Hugo + Cloudflare Pages：给每个想开博客的人一个参考答案。"
+posttype: "复盘"
+summary: "建站初衷，以及为什么是 Hugo + Cloudflare Pages。"
 draft: false
 slug: "why-this-blog"
 description: "建站初衷，以及为什么选择 Hugo + Cloudflare Pages 这个零成本方案"

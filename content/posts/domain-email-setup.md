@@ -1,7 +1,8 @@
 ---
 title: "域名创建与品牌邮箱部署（详细图文教学版）"
 date: 2026-09-07
-
+posttype: "教程"
+homeblock: tutorial
 summary: "域名 + DNS + 品牌邮箱一次走完：注册域名 → Cloudflare 接管 → OquMail 免费邮箱 → 实测收发（已实测）。"
 draft: false
 slug: "domain-email-setup"
@@ -9,7 +10,6 @@ description: "从注册域名到创建第一个品牌邮箱的完整图文教程
 tags: ["教程", "域名", "邮箱", "DNS", "Cloudflare"]
 categories: ["建站教程"]
 related: ['github-beginner-to-expert', 'why-this-blog']
-homeblock: tutorial
 ---
 
 按视频真实操作顺序整理，步骤、界面、DNS 记录和排错全部展开。

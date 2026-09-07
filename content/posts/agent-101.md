@@ -1,7 +1,8 @@
 ---
 title: "AI Agent 入门：从 LLM 到能办事的助手"
 date: 2026-09-06
-
+posttype: "教程"
+homeblock: tutorial
 summary: "什么是 Agent、为什么现在火、自己怎么搭一个——写给程序员的入门笔记。"
 draft: false
 slug: "agent-101"
@@ -9,7 +10,6 @@ description: "一篇写给程序员的 Agent 入门笔记：什么是 Agent、�
 tags: ["Agent", "LLM", "入门"]
 categories: ["AI与工具"]
 related: ['tech-tools']
-homeblock: tutorial
 ---
 
 ## 什么是 Agent

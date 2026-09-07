@@ -1,15 +1,15 @@
 ---
 title: "科技杂谈：我常用的网站和 App 清单"
 date: 2026-09-06
-
-summary: "一份持续更新的实用清单：日常、购物、音乐、AI、应用与网站的「不翻墙/翻墙」两档推荐。"
+posttype: "随笔"
+homeblock: creative
+summary: "一份持续更新的实用清单：日常、购物、音乐、AI、应用与网站的两档推荐。"
 draft: false
 slug: "tech-tools"
-description: "一份持续更新的实用清单：日常、购物、音乐、AI、应用、电脑网页六大类，国内/海外两档推荐"
+description: "一份持续更新的清单：日常、购物、音乐、AI、应用、电脑网页六大类，国内/海外两档推荐"
 tags: ["工具", "清单", "推荐"]
 categories: ["AI与工具"]
 related: ['agent-101']
-homeblock: creative
 ---
 
 这篇是一份持续更新的清单，记录我截止到目前为止认为**最有用的网站和 App**。
