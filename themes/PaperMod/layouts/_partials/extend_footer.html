@@ -1,5 +1,4 @@
-{{- /* 目录滚动高亮：监听标题位置，为 toc 当前项加 active */ -}}
-{{- if eq .Type "posts" }}
+{{- /* 目录滚动高亮：监听标题位置，为 toc 当前项加 active（JS 自守卫：无 toc 即返回） */ -}}
 <script>
 (function () {
   var toc = document.querySelector("details.toc");
@@ -40,4 +39,3 @@
   onScroll();
 })();
 </script>
-{{- end }}
