@@ -1,4 +1,27 @@
-{{- /* Post content custom area start */ -}}
-{{- /*     Insert any custom code after post content - it will appear after the post body, before the footer. */ -}}
-{{- /*     Can be overwritten by partial with the same name in the global layouts. */ -}}
-{{- /* Post content custom area end */ -}}
+{{- /* 文章尾部：作者卡 + 相关阅读（仅文章页） */ -}}
+{{- if eq .Type "posts" }}
+<div class="author-card">
+  <img class="author-avatar" src="/avatar.png" alt="Yutter" loading="lazy" />
+  <div class="author-info">
+    <strong>Yutter</strong>
+    <p>AI 折腾者 · 工具控。这里记录实测教程与避坑笔记，
+      欢迎<a href="mailto:yutter@yutterx.com">写邮件给我</a>交流。</p>
+  </div>
+</div>
+{{- with .Params.related }}
+<div class="related-posts">
+  <div class="related-head">相关阅读</div>
+  <ul>
+    {{- range . }}
+    {{- $rel := site.GetPage (printf "/posts/%s" .) }}
+    {{- with $rel }}
+    <li>
+      <a href="{{ .Permalink }}">{{ .Title }}</a>
+      <span class="related-desc">{{ .Description | plainify | truncate 48 }}</span>
+    </li>
+    {{- end }}
+    {{- end }}
+  </ul>
+</div>
+{{- end }}
+{{- end }}

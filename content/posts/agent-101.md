@@ -5,7 +5,8 @@ draft: false
 slug: "agent-101"
 description: "一篇写给程序员的 Agent 入门笔记：什么是 Agent、为什么现在火、自己怎么搭一个"
 tags: ["Agent", "LLM", "入门"]
-categories: ["技术"]
+categories: ["AI与工具"]
+related: ['tech-tools']
 ---
 
 ## 什么是 Agent

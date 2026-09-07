@@ -5,12 +5,16 @@ draft: false
 slug: "domain-migration"
 description: "一次真实的博客搬家记录：DNS 记了两轮、证书等不起、最后决定把站点搬到 Cloudflare Pages 的过程与复盘"
 tags: ["Meta", "建站"]
-categories: ["随笔"]
+categories: ["建站教程"]
+related: ['why-this-blog', 'github-beginner-to-expert']
 ---
 
 ## 起因
 
 网站最初搭在 **GitHub Pages + xiaozb.online** 上。一切都顺利：推送即部署、域名秒解析。
+
+> 对 GitHub 的仓库/分支/PR 还不熟？
+> 推荐先读 [GitHub 从入门到精通](/posts/github-beginner-to-expert/)，30 分钟看懂。
 
 但卡在了最后一步——**HTTPS 证书**。
 

@@ -7,7 +7,8 @@ pinned: true
 slug: "why-this-blog"
 description: "建站初衷，以及为什么选择 Hugo + Cloudflare Pages 这个零成本方案"
 tags: ["Meta", "建站"]
-categories: ["随笔"]
+categories: ["建站教程"]
+related: ['github-beginner-to-expert', 'domain-email-setup']
 ---
 
 ## 起因
@@ -35,6 +36,11 @@ AI 时代，信息的半衰期越来越短。读完一篇论文、踩完一个�
 - Push 到 GitHub 即自动构建部署，仓库就是备份
 - 自定义域名、SSL 证书、CDN 全自动
 - 域名我已经有了 `yutterx.com`，配个 DNS 就行
+
+> 想知道这背后的域名与 DNS 是怎么一步步配好的？
+> 我的实操记录：[域名创建与品牌邮箱部署（详细图文教学版）](/posts/domain-email-setup/)，
+> 从买域名到创建品牌邮箱，一条龙实测。对 GitHub 仓库不熟的话，
+> 建议先读 [GitHub 从入门到精通](/posts/github-beginner-to-expert/)。
 
 ## 接下来
 

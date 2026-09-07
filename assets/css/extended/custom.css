@@ -302,3 +302,157 @@ code {
   border-radius: 999px;
   padding: 2px 10px;
 }
+
+/* ===== 首页三层漏斗：最新文章区 ===== */
+.main .profile {
+  min-height: 46vh;
+}
+
+.home-recent {
+  max-width: 720px;
+  margin: 1.2rem auto 0;
+  padding: 0 var(--gap);
+}
+
+.home-recent-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 1.1rem;
+}
+
+.home-recent-head h2 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin: 0;
+}
+
+.home-recent-head a {
+  font-size: 0.9rem;
+  color: #0a84ff;
+}
+
+[data-theme="dark"] .home-recent-head a {
+  color: #4ca6ff;
+}
+
+.home-recent-list .post-entry {
+  margin-bottom: 1.1rem;
+}
+
+/* ===== 文章尾：作者卡 ===== */
+.author-card {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 2.4em;
+  padding: 1.1em 0 0.4em;
+  border-top: 1px solid var(--border);
+}
+
+.author-card .author-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  flex: none;
+}
+
+.author-card .author-info strong {
+  font-size: 0.95rem;
+}
+
+.author-card .author-info p {
+  font-size: 0.88rem;
+  color: var(--secondary);
+  margin: 0.2em 0 0;
+  line-height: 1.6;
+}
+
+.author-card .author-info a {
+  color: #0a84ff;
+}
+
+[data-theme="dark"] .author-card .author-info a {
+  color: #4ca6ff;
+}
+
+/* ===== 相关阅读 ===== */
+.related-posts {
+  margin-top: 1.8em;
+  padding-top: 0.2em;
+}
+
+.related-posts .related-head {
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  color: var(--secondary);
+  text-transform: uppercase;
+  margin-bottom: 0.5em;
+}
+
+.related-posts ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.related-posts li {
+  margin: 0.55em 0;
+}
+
+.related-posts a {
+  color: #0a84ff;
+  font-weight: 500;
+}
+
+[data-theme="dark"] .related-posts a {
+  color: #4ca6ff;
+}
+
+.related-posts .related-desc {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--secondary);
+  margin-top: 2px;
+}
+
+/* ===== 教程信息块 & 已实测徽章 ===== */
+.tutorial-meta {
+  background: var(--code-bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.9em 1.1em;
+  margin: 1.2em 0;
+  font-size: 0.94em;
+  line-height: 1.7;
+}
+
+.tutorial-meta strong {
+  display: inline-block;
+  font-size: 0.8em;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-right: 0.5em;
+}
+
+.verified-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  color: #2e7d32;
+  background: rgba(76, 175, 80, 0.12);
+  border: 1px solid rgba(76, 175, 80, 0.35);
+  border-radius: 999px;
+  padding: 2px 10px;
+}
+
+[data-theme="dark"] .verified-badge {
+  color: #7bd88f;
+  background: rgba(76, 175, 80, 0.16);
+}

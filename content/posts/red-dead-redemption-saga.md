@@ -5,7 +5,8 @@ draft: false
 slug: "red-dead-redemption-saga"
 description: "把《荒野大镖客：救赎2》与《救赎1》串成一部完整编年史：范德林德帮的黄昏、亚瑟的救赎、约翰的清算与杰克·马斯顿最后的枪声"
 tags: ["游戏", "荒野大镖客", "剧情", "RDR"]
-categories: ["随笔"]
+categories: ["游戏与创作"]
+related: ['unnamed-friendship']
 ---
 
 > "我不常谈起他，但我时常想起他。"

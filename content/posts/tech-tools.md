@@ -5,7 +5,8 @@ draft: false
 slug: "tech-tools"
 description: "一份持续更新的实用清单：日常、购物、音乐、AI、应用、电脑网页六大类，国内/海外两档推荐"
 tags: ["工具", "清单", "推荐"]
-categories: ["随笔"]
+categories: ["AI与工具"]
+related: ['agent-101']
 ---
 
 这篇是一份持续更新的清单，记录我截止到目前为止认为**最有用的网站和 App**。

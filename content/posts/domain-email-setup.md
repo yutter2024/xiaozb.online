@@ -5,10 +5,19 @@ draft: false
 slug: "domain-email-setup"
 description: "从注册域名到创建第一个品牌邮箱的完整图文教程：Google Workspace 买域名（土耳其区 11 元/年）→ Cloudflare 接管 DNS → OquMail 免费域名邮箱 → 配置 MX/SPF/DKIM/DMARC → 测试收发，含全部排错步骤"
 tags: ["教程", "域名", "邮箱", "DNS", "Cloudflare"]
-categories: ["技术"]
+categories: ["建站教程"]
+related: ['github-beginner-to-expert', 'why-this-blog']
 ---
 
 按视频真实操作顺序整理，步骤、界面、DNS 记录和排错全部展开。
+
+<span class="verified-badge">✅ 已实测</span>
+
+<div class="tutorial-meta">
+<strong>适用对象</strong>想要一个带自己品牌域名的邮箱、预算 20 元/年以内的人<br>
+<strong>预计时长</strong>30–60 分钟（大部分时间在等 DNS 生效）<br>
+<strong>前置准备</strong>一张 Visa/Mastercard 信用卡 + Cloudflare 账号 + 一个常用邮箱
+</div>
 
 > **本版重点**：这版只围绕实际创建流程展开。你会按顺序完成：创建域名、验证域名、接管 DNS、创建 OquMail 主账号、添加邮箱 DNS 记录、创建第一个域名邮箱、测试收发。价格和页面名称会变化，遇到不同界面时，以同一功能的实际按钮为准。
 

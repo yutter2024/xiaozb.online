@@ -5,10 +5,17 @@ draft: false
 slug: "github-beginner-to-expert"
 description: "万字长文（转载）：一次走通 GitHub——看懂别人的仓库、发布第一个项目、走通一次真实协作、接入 Actions/Pages/Release，以及常见翻车自救"
 tags: ["GitHub", "教程", "Git", "转载"]
-categories: ["技术"]
+categories: ["建站教程"]
+related: ['domain-email-setup', 'why-this-blog']
 ---
 
 > ✍️ **转载文章**｜原作者：小墨同学（@xiaomovps）｜[原文链接](https://x.com/i/article/2095169933118480384)｜[原推文](https://x.com/xiaomovps/status/2095322130422653298)
+
+<div class="tutorial-meta">
+<strong>适用对象</strong>想用 GitHub 找项目/发成果/参与协作，但一进仓库就晕的人<br>
+<strong>预计时长</strong>阅读 30–50 分钟，动手实践 2–3 小时<br>
+<strong>前置准备</strong>安装 Git + 注册 GitHub 账号；[域名/DNS 实操见域名邮箱教程](/posts/domain-email-setup/)
+</div>
 
 很多人第一次打开 GitHub，只是想跟着 AI 安装一个工具。AI 或安装教程甩来一个仓库链接，点进去以后，Code、Issues、Pull requests、Actions、main、commits、branches 和 tags 同时铺在眼前。原本只想找到下载按钮，几分钟后却连该下载哪个文件、源码能不能直接运行都拿不准。
 

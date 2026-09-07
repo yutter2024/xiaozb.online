@@ -2,6 +2,36 @@
 
 {{- if (and site.Params.profileMode.enabled .IsHome) }}
 {{- partial "index_profile.html" . }}
+{{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
+{{- with (first 3 $pages) }}
+<div class="home-recent">
+  <div class="home-recent-head">
+    <h2>最新文章</h2>
+    <a href="{{ "/posts/" | relURL }}">全部文章 →</a>
+  </div>
+  <div class="home-recent-list">
+    {{- range . }}
+    <article class="post-entry">
+      <header class="entry-header">
+        <h2 class="entry-hint-parent">
+          <span class="pin-wrap">{{- if .Params.pinned }}<span class="pin-badge">置顶</span>{{- end }}{{ .Title }}</span>
+        </h2>
+      </header>
+      {{- if (ne (.Param "hideSummary") true) }}
+      <div class="entry-content">
+        <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+      </div>
+      {{- end }}
+      <footer class="entry-footer">
+        {{- partial "post_meta.html" . -}}
+      </footer>
+      <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
+    </article>
+    {{- end }}
+  </div>
+</div>
+{{- end }}
 {{- else }} {{/* if not profileMode */}}
 
 {{- if not .IsHome | and .Title }}
