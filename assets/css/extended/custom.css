@@ -571,16 +571,16 @@ code {
   transform: translateY(-1px);
 }
 
-/* ===== 复评落地：目录 sticky + 当前章节高亮 ===== */
+/* ===== 复评落地：目录折叠卡片（流内展开，不遮挡正文） ===== */
 details.toc {
-  position: sticky;
-  top: calc(var(--header-height) + 12px);
-  z-index: 5;
+  position: static;
+  z-index: auto;
   background: var(--theme);
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 0.4em 1em;
-  max-width: 280px;
+  max-width: 100%;
+  margin: 0 0 1.2em;
 }
 
 [data-theme="dark"] details.toc {
