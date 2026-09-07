@@ -571,25 +571,6 @@ code {
   transform: translateY(-1px);
 }
 
-/* ===== 复评落地：导航"从这里开始"主入口 ===== */
-.menu a[href="/start/"],
-.menu a[title="从这里开始"] {
-  background: #0a84ff;
-  color: #fff;
-  border-radius: 999px;
-  padding: 3px 14px;
-  transition: opacity 0.15s ease;
-}
-
-[data-theme="dark"] .menu a[title="从这里开始"] {
-  background: #4ca6ff;
-}
-
-.menu a[href="/start/"]:hover,
-.menu a[title="从这里开始"]:hover {
-  opacity: 0.85;
-}
-
 /* ===== 复评落地：目录 sticky + 当前章节高亮 ===== */
 details.toc {
   position: sticky;
