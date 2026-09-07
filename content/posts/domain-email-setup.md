@@ -1,12 +1,15 @@
 ---
 title: "域名创建与品牌邮箱部署（详细图文教学版）"
 date: 2026-09-07
+
+summary: "域名 + DNS + 品牌邮箱一次走完：注册域名 → Cloudflare 接管 → OquMail 免费邮箱 → 实测收发（已实测）。"
 draft: false
 slug: "domain-email-setup"
 description: "从注册域名到创建第一个品牌邮箱的完整图文教程：Google Workspace 买域名（土耳其区 11 元/年）→ Cloudflare 接管 DNS → OquMail 免费域名邮箱 → 配置 MX/SPF/DKIM/DMARC → 测试收发，含全部排错步骤"
 tags: ["教程", "域名", "邮箱", "DNS", "Cloudflare"]
 categories: ["建站教程"]
 related: ['github-beginner-to-expert', 'why-this-blog']
+homeblock: tutorial
 ---
 
 按视频真实操作顺序整理，步骤、界面、DNS 记录和排错全部展开。
@@ -40,7 +43,7 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 打开 Google Workspace 官方注册页面，点击"开始免费试用"、Get started 或相同含义的按钮。已登录 Google 账号时，系统通常会自动识别当前账号；没有登录时，按页面提示登录。
 
-**图 1 · Workspace 注册流程界面**
+**图 01｜Workspace 注册流程界面**
 
 ![图1 注册流程](/images/domain-email-setup/fig01.jpg)
 
@@ -58,7 +61,7 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 > - 系统**默认将联系信息设为不公开**（免费附赠 Whois 隐私保护），别人查不到你的真实信息；
 > - 视频中的地址、电话、邮箱、密码只是演示内容，不要照抄——但**国家/地区、资料结构按土耳其标准走**。
 
-**图 2 · 填写域名注册人的姓氏、名字和辅助邮箱**
+**图 02｜填写域名注册人的姓氏、名字和辅助邮箱**
 
 ![图2 填写联系人](/images/domain-email-setup/fig02.jpg)
 
@@ -70,7 +73,7 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 输入准备好的域名名称，点击搜索。系统会告诉你这个域名是否可购买。已被占用的名称不能直接注册，换名称或从系统推荐的备选中选择。
 
-**图 3 · 搜索要注册的域名名称**
+**图 03｜搜索要注册的域名名称**
 
 ![图3 搜索域名](/images/domain-email-setup/fig03.jpg)
 
@@ -84,7 +87,7 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 付款前不要只看首年金额。重点检查注册年限、续费价格、货币、税费和自动续费状态。视频中的人民币换算只适用于当时汇率和账号条件，实际金额以你当前结算页显示为准。
 
-**图 4 · 检查域名注册价格和币种**
+**图 04｜检查域名注册价格和币种**
 
 ![图4 确认价格](/images/domain-email-setup/fig04.jpg)
 
@@ -92,7 +95,7 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 按页面要求填写街道、城市、省份、邮编和电话。**因为选了土耳其区，地址也填土耳其地址生成器给出的本地地址**（街道、邮编、区、省依次填入），电话随便填。收款资料与地区要保持一致。若页面显示 Whois 隐私保护选项，查看它是否已经开启。
 
-**图 5 · 填写域名联系人地址和电话**
+**图 05｜填写域名联系人地址和电话**
 
 ![图5 联系人地址](/images/domain-email-setup/fig05.jpg)
 
@@ -105,7 +108,7 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 - 恢复邮箱要使用你能长期访问的普通邮箱。
 - 不要把视频中的示例密码复制到自己的账号。
 
-**图 6 · 设置 Workspace 管理员用户名和密码**
+**图 06｜设置 Workspace 管理员用户名和密码**
 
 ![图6 管理员账号](/images/domain-email-setup/fig06.jpg)
 
@@ -120,7 +123,7 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 > 🎯 支持 Visa / Mastercard 国际信用卡；**预付卡不支持**（如 Bybit 卡会被拒，招商银行 Visa 信用卡实测成功）。逐项确认今天扣款金额、试用结束时间、后续自动扣款金额和取消入口。完成付款后，保存订单邮件和截图。
 
-**图 7 · 确认付款方式和应付金额**
+**图 07｜确认付款方式和应付金额**
 
 ![图7 付款](/images/domain-email-setup/fig07.jpg)
 
@@ -134,13 +137,13 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 打开辅助邮箱或新建账号的邮箱，查找来自 Squarespace 的验证邮件。点击 Verify、验证联系人或类似按钮。验证完成后，域名状态应从 Action required 变为 Active。
 
-**图 8 · 使用新建的 Workspace 账号进入域名管理页面**
+**图 08｜使用新建的 Workspace 账号进入域名管理页面**
 
 ![图8 域名管理](/images/domain-email-setup/fig08.jpg)
 
 **步骤 9 补充 · 点击 Log in 用 Continue with Google 登录（务必选刚购买的带新域名企业邮箱授权登录），进入后域名在 Domain 列表，状态 Action required——15 天内完成邮箱验证，回到邮件点 Verify，状态变绿色 Active**。
 
-**图 9 · 确认域名已经激活**
+**图 09｜确认域名已经激活**
 
 ![图9 域名激活](/images/domain-email-setup/fig09.jpg)
 
@@ -148,7 +151,7 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 登录 Cloudflare，点击 Add a site，输入完整域名，例如 example.com。不要输入 https://、www 或邮箱前缀。选择免费方案。Cloudflare 会尝试扫描并导入现有记录 —— **导入后建议把所有"小黄云"（代理状态）先临时关闭**，记录用途看清楚再继续。
 
-**图 10 · 把域名添加到 Cloudflare**
+**图 10｜把域名添加到 Cloudflare**
 
 ![图10 添加域名](/images/domain-email-setup/fig10.jpg)
 
@@ -164,7 +167,7 @@ related: ['github-beginner-to-expert', 'why-this-blog']
 
 Cloudflare 会给出两条名称服务器。复制后回到 Squarespace 的 Domain Name Servers 页面，点 Use Custom Name Servers，删除旧名称服务器，粘贴两条新地址并保存。名称服务器不是普通 DNS 记录，必须在注册商的域名设置页面修改。
 
-**图 11 · 把 Cloudflare 分配的名称服务器复制回域名注册商**
+**图 11｜把 Cloudflare 分配的名称服务器复制回域名注册商**
 
 ![图11 替换NS](/images/domain-email-setup/fig11.jpg)
 
@@ -177,7 +180,7 @@ DNSSEC 像是域名的防篡改密码锁，**两边锁不一致会导致域名�
 3. **再回 Cloudflare DNS 设置里启用 DNSSEC**，生成全新参数；
 4. 回 Squarespace 的 DNSSEC 选项 Add Record，**把 Cloudflare 给的参数一一对应填回去**（重新上锁）。
 
-**图 12 · 迁移时检查 DNSSEC 状态**
+**图 12｜迁移时检查 DNSSEC 状态**
 
 ![图12 DNSSEC](/images/domain-email-setup/fig12.jpg)
 
@@ -191,7 +194,7 @@ DNSSEC 像是域名的防篡改密码锁，**两边锁不一致会导致域名�
 
 打开 OquMail 官网，点击 Get started free、Get started now 或相同含义的按钮。注意这里创建的是 OquMail 管理后台主账号，还不是最终给别人使用的域名邮箱。
 
-**图 13 · OquMail 首页，点击 Get started free**
+**图 13｜OquMail 首页，点击 Get started free**
 
 ![图13 OquMail首页](/images/domain-email-setup/fig13.jpg)
 
@@ -201,7 +204,7 @@ DNSSEC 像是域名的防篡改密码锁，**两边锁不一致会导致域名�
 
 > 💡 **免费额度实测**：可创建 **15 个邮箱**、最多绑定 **3 个独立域名**、每个邮箱每天可发 **250 封**、每个邮箱 **5GB 容量**——完全足够个人/小团队使用。超出后每加一个邮箱仅 **1 美元/月**。额度以 OquMail 当前官网为准，不要当成永久承诺。
 
-**图 14 · 填写 OquMail 主账号注册信息**
+**图 14｜填写 OquMail 主账号注册信息**
 
 ![图14 主账号](/images/domain-email-setup/fig14.jpg)
 
@@ -213,7 +216,7 @@ DNSSEC 像是域名的防篡改密码锁，**两边锁不一致会导致域名�
 
 在 OquMail 后台点击 Add Domain，输入完整域名，例如 example.com，然后点击 Connect My Domain。平台会展示 TXT、MX、SPF、DKIM、DMARC 等记录。保持这个页面打开，另开 Cloudflare 标签页。
 
-**图 15 · 点击 Add Domain 添加自己的域名**
+**图 15｜点击 Add Domain 添加自己的域名**
 
 ![图15 添加域名](/images/domain-email-setup/fig15.jpg)
 
@@ -221,7 +224,7 @@ DNSSEC 像是域名的防篡改密码锁，**两边锁不一致会导致域名�
 
 如果 OquMail 提供 Cloudflare 一键配置，页面可能要求授权访问 Cloudflare。授权前看清权限范围。你不想授权时，可以取消授权，改用手动复制 DNS 记录的方式。手动配置更容易确认每条记录的具体内容。
 
-**图 16 · OquMail 请求访问 Cloudflare 的授权页面**
+**图 16｜OquMail 请求访问 Cloudflare 的授权页面**
 
 ![图16 授权](/images/domain-email-setup/fig16.jpg)
 
@@ -229,7 +232,7 @@ DNSSEC 像是域名的防篡改密码锁，**两边锁不一致会导致域名�
 
 在 Cloudflare DNS 页面点击 Add record。类型选择 MX，Name 通常是 @，服务器地址复制 OquMail 显示的地址，Priority 按页面要求填写（视频演示 mail.oqumail.com、优先级 10）。这条记录告诉整个互联网：**发给这个域名的所有邮件，交给 OquMail 接收**。
 
-**图 17 · 添加 MX 记录，指定邮件接收服务器**
+**图 17｜添加 MX 记录，指定邮件接收服务器**
 
 ![图17 MX记录](/images/domain-email-setup/fig17.jpg)
 
@@ -240,7 +243,7 @@ DNSSEC 像是域名的防篡改密码锁，**两边锁不一致会导致域名�
 - **SPF**（TXT）：发件人白名单——告诉收件方只有经授权的服务器发出的邮件才是真的，防止别人冒充你的域名发垃圾邮件；
 - **DKIM**（TXT）：数字防伪印章——确保邮件传输途中未被篡改。主机名通常含 selector，内容是一串公钥，必须从 OquMail 后台**完整复制**。
 
-**图 18 · 添加 SPF 和 DKIM 记录**
+**图 18｜添加 SPF 和 DKIM 记录**
 
 ![图18 SPF/DKIM](/images/domain-email-setup/fig18.jpg)
 
@@ -250,7 +253,7 @@ DNSSEC 像是域名的防篡改密码锁，**两边锁不一致会导致域名�
 
 DMARC 是安全兜底策略：如果邮件没通过前面两项验证，就直接拒收或扔垃圾箱。主机名通常是 _dmarc，记录内容按 OquMail 提示填写。保存后回 OquMail 点 "I've added the records" — Verify DNS。
 
-**图 19 · 添加 DMARC 后点击 Verify DNS**
+**图 19｜添加 DMARC 后点击 Verify DNS**
 
 ![图19 DMARC](/images/domain-email-setup/fig19.jpg)
 
@@ -264,7 +267,7 @@ DMARC 是安全兜底策略：如果邮件没通过前面两项验证，就直�
 
 在 OquMail 左侧打开 Users and Mailboxes，点击 Add User。Email address 输入邮箱前缀，例如 hello、support 或你的名字，再从下拉框选择已验证域名。页面会组合出 hello@example.com。
 
-**图 20 · 添加用户并设置邮箱前缀、域名和权限**
+**图 20｜添加用户并设置邮箱前缀、域名和权限**
 
 ![图20 添加用户](/images/domain-email-setup/fig20.jpg)
 
@@ -281,9 +284,11 @@ DMARC 是安全兜底策略：如果邮件没通过前面两项验证，就直�
 
 退出管理后台（Sign out），使用完整域名邮箱和新密码登录 OquMail 网页邮箱。进入后先确认左上角显示的发件人地址是你的域名邮箱，而不是注册 OquMail 的普通邮箱。
 
-**图 21 · 使用新创建的域名邮箱登录网页邮箱**
+**图 21｜使用新创建的域名邮箱登录网页邮箱**
 
 ![图21 网页邮箱](/images/domain-email-setup/fig21.jpg)
+
+> ✅ **检查点**：登录后左上角发件人地址应显示 **hello@example.com**（你的域名邮箱），而不是注册 OquMail 的普通邮箱。
 
 **步骤 27 · 测试发信**
 
@@ -301,7 +306,7 @@ DMARC 是安全兜底策略：如果邮件没通过前面两项验证，就直�
 
 > 💡 **好消息：OquMail 官网写着"不支持第三方客户端"，但实测完美支持 Outlook！**（推测是官方最近新增功能、网页说明未更新）。配置方式非常简单：打开 Outlook 客户端 → 添加账户 → 输入完整域名邮箱和密码 → 继续。**大多数现代客户端内置自动发现机制**——只要 MX 正确指向 OquMail，Outlook 会自动完成配置，**你根本不需要手动填任何端口的参数**。如果用的是小众/老旧客户端无法自动匹配，才需要去后台 "Connect to App (IMAP)" 查看 IMAP/SMTP 参数手动设置。
 
-**图 22 · 使用完整域名邮箱配置 Outlook**
+**图 22｜使用完整域名邮箱配置 Outlook**
 
 ![图22 Outlook配置](/images/domain-email-setup/fig22.jpg)
 

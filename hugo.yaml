@@ -20,6 +20,7 @@ params:
   defaultTheme: auto
   ShowShareButtons: false
   ShowPostNavLinks: true
+  ShowToc: true
   ShowBreadCrumbs: true
   ShowCodeCopyButtons: true
   ShowReadingTime: true
@@ -51,8 +52,10 @@ params:
     imageWidth: 128
     imageHeight: 128
     buttons:
-      - name: 查看文章
-        url: /posts/
+      - name: 从这里开始
+        url: /start/
+      - name: 看我的实测教程
+        url: /categories/建站教程/
   socialIcons:
     - name: github
       url: "https://github.com/yutter2024"

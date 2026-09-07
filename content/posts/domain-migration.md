@@ -1,6 +1,8 @@
 ---
 title: "换域名记：从 GitHub Pages 迁到 Cloudflare Pages"
 date: 2026-09-06
+
+summary: "从 GitHub Pages 迁到 Cloudflare Pages 的完整记录：DNS、证书等待与方案对比。"
 draft: false
 slug: "domain-migration"
 description: "一次真实的博客搬家记录：DNS 记了两轮、证书等不起、最后决定把站点搬到 Cloudflare Pages 的过程与复盘"
